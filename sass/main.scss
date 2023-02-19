@@ -281,5 +281,77 @@ MAIN SECTION
   }
 }
 
+// image "shadow" LEFT
+
+.primary-shadow-left {
+  position: relative;
+  overflow-x: hidden !important;
+}
+.primary-shadow-left:before {
+  content: "";
+  position: absolute;
+  border-radius: 0 0 120px 0;
+  bottom: 40%;
+  left: 0px;
+  width: 22em;
+  height: 13em;
+  background-color: #5265E1; 
+  z-index: -1;
+  overflow-x: hidden !important;
+}
+
+@media (min-width: 590px) {
+  .primary-shadow-left:before {
+    bottom: 30%;
+    width: 30em;
+    height: 17em;
+  }
+}
+
+@media (min-width: 992px) {
+  .primary-shadow-left:before {
+    bottom: 0%;
+    width: 30em;
+    height: 17em;
+  }
+}
+
+
+// Tab links underline
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  opacity: 0;
+  transition: all .2s;
+  height: 6px;
+  width: 50%;
+  background-color: #FA5959;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+}
+
+.underline:hover::after,
+.underline:focus::after,
+.underline:active::after {
+  opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  .underline::after {
+    width: 75%;
+    left: 14%;
+    right: 14%;
+  }
+  ul .custom-borders {
+    border-top: none !important;
+  }
+}
+
 // importar Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
