@@ -33,6 +33,20 @@ $accordion-button-icon: url("/Imagenes/icon-arrow.svg");
 $accordion-button-active-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#{$accordion-icon-active-color}" stroke-width="3" d="M1 1l8 8 8-8"/></svg>');
 
 /*------------------------
+FOOTER
+------------------------*/
+
+// Form
+
+$input-placeholder-color: #CECED0;
+
+// Iconos del footer
+
+.footer-icon:hover {
+  fill: #FA5959;
+}
+
+/*------------------------
 CUSTOM UTILITIES
 ------------------------*/
 
