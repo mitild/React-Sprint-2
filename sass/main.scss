@@ -1,0 +1,285 @@
+/*------------------------
+GLOBALES
+------------------------*/
+// Colores principales del Theme
+
+$primary: #5265E1;
+$secondary: #FA5959;
+$dark: #2d334b;
+
+/*------------------------
+NAVBAR
+------------------------*/
+
+// Navbar Icon
+
+$navbar-light-toggler-icon-bg: url("/Imagenes/icon-hamburger.svg");
+
+/*------------------------
+CUSTOM UTILITIES
+------------------------*/
+
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+
+@import '../node_modules/bootstrap/scss/_maps';
+@import '../node_modules/bootstrap/scss/_utilities';
+
+// Agregar clases de opacities
+
+ $utilities:(
+  "opacity":(
+    property:opacity,
+    class:opacity,
+    values:(
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+      90: .9,
+      10: .1
+    )
+  ),
+  "text-colors":(
+    property:color,
+    class:text-color,
+    state:hover active,
+    values:(
+      bl: #212427,
+      wh: #FFF,
+      gr: #bcbcbe,
+      dark-gr: #7b7b7b,
+      pri: #5265E1,
+      sec: #FA5959,
+      tr: transparent,
+    )
+  ),
+  "bg-hover-colors":(
+    property:background-color,
+    class:h-bg,
+    state:hover,
+    values:(
+      bl: #212427,
+      wh: #FFF,
+      gr: #CECED0,
+      pri: #5265E1,
+      sec: #FA5959,
+      tr: transparent,
+      light-tr: #ffffffcc
+    )
+  ),
+  "br-hover-colors":(
+    property:border,
+    class:h-br,
+    state:hover,
+    values:(
+      bl: 2px solid #212427,
+      wh: 2px solid #FFF,
+      gr: 2px solid #CECED0,
+      pri: 2px solid #5265E1,
+      sec: 2px solid #FA5959,
+    )
+  ),
+  "spacing":(
+    responsive: true,
+    property: padding,
+    class: spacing,
+    values:(
+      1:.8em,
+      2:2em,
+      3:3em,
+      4:4em,
+      5:5em,
+      6:6em,
+      7:7em,
+      8:8em,
+      9:9em,
+      10:10em,
+      15:15em,
+      20:20em,
+      30:30em,
+      35:35em,
+      40:40em
+    )
+  ),
+  "spacing-top":(
+    responsive: true,
+    property: padding-top,
+    class: spacing-top,
+    values:(
+      1:.8em,
+      2:2em,
+      3:3em,
+      4:4em,
+      5:5em,
+      6:6em,
+      7:7em,
+      8:8em,
+      9:9em,
+      10:10em,
+      15:15em,
+      20:20em,
+      30:30em,
+      35:35em,
+      40:40em
+    )
+  ),
+  "spacing-bottom":(
+    responsive: true,
+    property: padding-bottom,
+    class: spacing-bottom,
+    values:(
+      1:.8em,
+      2:2em,
+      3:3em,
+      4:4em,
+      5:5em,
+      6:6em,
+      7:7em,
+      8:8em,
+      9:9em,
+      10:10em,
+      15:15em,
+      20:20em,
+      30:30em,
+      35:35em,
+      40:40em
+    )
+  ),
+  "spacing-left":(
+    responsive: true,
+    property: padding-left,
+    class: spacing-left,
+    values:(
+      1:.8em,
+      2:2em,
+      3:3em,
+      4:4em,
+      5:5em,
+      6:6em,
+      7:7em,
+      8:8em,
+      9:9em,
+      10:10em,
+      15:15em,
+      20:20em,
+      30:30em,
+      35:35em,
+      40:40em
+    )
+  ),
+  "spacing-right":(
+    responsive: true,
+    property: padding-right,
+    class: spacing-right,
+    values:(
+      1:.8em,
+      2:2em,
+      3:3em,
+      4:4em,
+      5:5em,
+      6:6em,
+      7:7em,
+      8:8em,
+      9:9em,
+      10:10em,
+      15:15em,
+      20:20em,
+      30:30em,
+      35:35em,
+      40:40em
+    )
+  )
+ );
+
+// Otros tamaños de textos
+
+$tamaño-de-textos: (
+    7: .8rem,
+    8: .75rem,
+    9: $font-size-base * 4,
+    10: $font-size-base * 3,
+    11: .9rem
+  );
+
+$font-sizes: map-merge($tamaño-de-textos, $font-sizes);
+
+// Custom Class para letter spacing
+
+.l-spacing-1 {
+  letter-spacing: .1em;
+}
+
+.l-spacing-3 {
+  letter-spacing: .3em;
+}
+
+// Custom button padding
+
+$btn-padding-y: 9px; 
+$btn-padding-x: 29px;
+
+/*------------------------
+NAV MENU MOBILE & TABLET
+------------------------*/
+
+// Toggler
+
+$navbar-toggler-focus-width: 0;
+$navbar-light-toggler-border-color: none; 
+
+// Botón de cerrar
+
+.btn-close {
+  background: url(/Imagenes/icon-close.svg) center no-repeat !important;
+} 
+
+// Bordes de los links 
+
+.border-light {
+  --bs-border-opacity: .5 !important;
+}
+
+/*------------------------
+MAIN SECTION
+------------------------*/
+
+// image "shadow" RIGHT
+
+.primary-shadow-right {
+  position: relative;
+  overflow-x: hidden !important;
+}
+.primary-shadow-right:after {
+  content: "";
+  position: absolute;
+  border-radius: 100px 0 0 120px;
+  bottom: 50%;
+  right: 0;
+  width: 22em;
+  height: 13em;
+  background-color: #5265E1; 
+  z-index: -1;
+  overflow-x: hidden !important;
+}
+
+@media (min-width: 690px) {
+  .primary-shadow-right:after {
+    bottom: 40%;
+    width: 25em;
+    height: 17em;
+  }
+}
+
+@media (min-width: 992px) {
+  .primary-shadow-right:after {
+    bottom: 10%;
+    width: 30em;
+    height: 17em;
+  }
+}
+
+// importar Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
