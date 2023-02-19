@@ -353,5 +353,21 @@ MAIN SECTION
   }
 }
 
+/*------------------------
+CARDS
+------------------------*/
+
+// Cards 
+
+@media (min-width: 990px) {
+  .card:nth-child(2) {
+    margin-top: 4em !important;
+  }
+  
+  .card:nth-child(3) {
+    margin-top: 8em !important;
+  }
+}
+
 // importar Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
